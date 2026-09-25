@@ -1,4 +1,4 @@
-const API_BASE = "http://127.0.0.1:5000/api";
+const API_BASE = "https://student-management-system-eayn.onrender.com/api";
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchStudents();
