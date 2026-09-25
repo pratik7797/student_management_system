@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Performance & Grade System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Academic Performance & Grade System</h1>
+        </header>
+
+        <!-- Analytics Cards -->
+        <div class="analytics-grid">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="stat-total">0</p>
+            </div>
+            <div class="card">
+                <h3>Class Average</h3>
+                <p id="stat-avg">0%</p>
+            </div>
+            <div class="card">
+                <h3>Highest Scorer</h3>
+                <p id="stat-highest">-</p>
+            </div>
+            <div class="card">
+                <h3>Lowest Scorer</h3>
+                <p id="stat-lowest">-</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Add / Edit Form -->
+            <section class="form-section">
+                <h2 id="form-title">Add New Student</h2>
+                <form id="student-form">
+                    <input type="text" id="roll_no" placeholder="Roll Number" required>
+                    <input type="text" id="name" placeholder="Student Name" required>
+                    
+                    <h3>Subject Marks (Out of 100)</h3>
+                    <input type="number" id="m_math" placeholder="Mathematics" min="0" max="100" required>
+                    <input type="number" id="m_sci" placeholder="Science" min="0" max="100" required>
+                    <input type="number" id="m_eng" placeholder="English" min="0" max="100" required>
+                    <input type="number" id="m_soc" placeholder="Social Studies" min="0" max="100" required>
+                    <input type="number" id="m_cs" placeholder="Computer Science" min="0" max="100" required>
+
+                    <button type="submit" id="submit-btn">Save Student</button>
+                    <button type="button" id="cancel-btn" style="display:none;">Cancel Edit</button>
+                </form>
+            </section>
+
+            <!-- Table & Actions -->
+            <section class="table-section">
+                <div class="table-header">
+                    <h2>Class Rankings</h2>
+                    <div>
+                        <button id="export-btn" class="secondary-btn">Export Summary</button>
+                        <button id="clear-all-btn" class="danger-btn">Reset All</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Roll No</th>
+                            <th>Name</th>
+                            <th>Percentage</th>
+                            <th>Grade</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-list"></tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
